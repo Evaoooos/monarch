@@ -6,7 +6,10 @@ const MODEL = process.env.ENDING_IMAGE_MODEL || "gpt-image-2";
 const SIZE = process.env.ENDING_IMAGE_SIZE || "1024x1536";
 const OUT_DIR = process.env.ENDING_IMAGE_OUT_DIR || "images/endings";
 const PROMPT_LOG = process.env.ENDING_PROMPT_LOG || "images/ending_image_prompts.jsonl";
+const FAILURE_LOG = process.env.ENDING_FAILURE_LOG || "images/ending_image_failures.jsonl";
 const DELAY_MS = Number(process.env.ENDING_IMAGE_DELAY_MS || 10000);
+const RETRY_COUNT = Number(process.env.ENDING_IMAGE_RETRIES || 4);
+const RETRY_BASE_MS = Number(process.env.ENDING_IMAGE_RETRY_BASE_MS || 20000);
 
 const STYLE =
   "Chinese ancient ink-wash and meticulous gongbi illustration, vintage silk scroll texture, muted gilded gold and deep ink-black dominant palette, slight aged yellow patina, smoky candlelit glow, dramatic chiaroscuro, cinematic vertical composition, clean large shapes, not overly detailed, no clutter, no text, no characters or readable writing, no watermark, with an ornate vintage game-card border integrated into the artwork";
@@ -228,8 +231,41 @@ function writePromptLog(items) {
   fs.writeFileSync(PROMPT_LOG, `${lines.join("\n")}\n`, "utf8");
 }
 
+function appendFailure(item, error) {
+  fs.mkdirSync(path.dirname(FAILURE_LOG), { recursive: true });
+  fs.appendFileSync(
+    FAILURE_LOG,
+    `${JSON.stringify({
+      id: item.id,
+      title: item.title,
+      size: SIZE,
+      output: path.join(OUT_DIR, `${item.id}.webp`).replaceAll("\\", "/"),
+      error: error?.message || String(error),
+      time: new Date().toISOString(),
+    })}\n`,
+    "utf8"
+  );
+}
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function responsePreview(json) {
+  try {
+    return JSON.stringify(json).slice(0, 1200);
+  } catch {
+    return String(json).slice(0, 1200);
+  }
+}
+
+async function downloadImage(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`image url HTTP ${response.status}: ${text.slice(0, 500)}`);
+  }
+  return Buffer.from(await response.arrayBuffer());
 }
 
 async function generateOne({ apiKey, prompt }) {
@@ -255,9 +291,37 @@ async function generateOne({ apiKey, prompt }) {
   }
 
   const json = await response.json();
-  const b64 = json?.data?.[0]?.b64_json;
-  if (!b64) throw new Error("Response did not include data[0].b64_json");
-  return Buffer.from(b64, "base64");
+  const item = json?.data?.[0];
+  if (item?.b64_json) return Buffer.from(item.b64_json, "base64");
+  if (item?.url) return downloadImage(item.url);
+  throw new Error(`Response did not include data[0].b64_json. Response preview: ${responsePreview(json)}`);
+}
+
+async function generateWithRetry({ apiKeys, startKeyIndex, prompt }) {
+  let lastError = null;
+  const attempts = Math.max(RETRY_COUNT, apiKeys.length);
+
+  for (let attempt = 0; attempt < attempts; attempt++) {
+    const keyIndex = (startKeyIndex + attempt) % apiKeys.length;
+    console.log(`  using key#${keyIndex + 1}/${apiKeys.length}`);
+
+    try {
+      const image = await generateOne({ apiKey: apiKeys[keyIndex], prompt });
+      return {
+        image,
+        nextKeyIndex: (keyIndex + 1) % apiKeys.length,
+      };
+    } catch (error) {
+      lastError = error;
+      if (attempt >= attempts - 1) break;
+
+      const waitMs = RETRY_BASE_MS + attempt * 5000;
+      console.log(`  retry/switch key after error: ${error.message}; waiting ${waitMs}ms`);
+      await sleep(waitMs);
+    }
+  }
+
+  throw lastError;
 }
 
 async function main() {
@@ -268,9 +332,9 @@ async function main() {
   const apiKeys = parseKeys(argValue("--api-keys") || process.env.UNITY2_API_KEYS || process.env.UNITY2_API_KEY);
   const items = idSet ? ENDING_PROMPTS.filter((item) => idSet.has(item.id)) : ENDING_PROMPTS;
 
-  writePromptLog(items);
+  writePromptLog(ENDING_PROMPTS);
   console.log(`Prompts written: ${PROMPT_LOG}`);
-  console.log(`Count: ${items.length}, size: ${SIZE}`);
+  console.log(`Prompt count: ${ENDING_PROMPTS.length}, generate count: ${items.length}, size: ${SIZE}`);
 
   if (dryRun) {
     items.forEach((item) => console.log(`${item.id} ${item.title} -> ${path.join(OUT_DIR, `${item.id}.webp`)}`));
@@ -283,6 +347,7 @@ async function main() {
   }
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
+  let keyCursor = 0;
   for (let i = 0; i < items.length; i++) {
     const item = items[i];
     const outPath = path.join(OUT_DIR, `${item.id}.webp`);
@@ -291,10 +356,16 @@ async function main() {
       continue;
     }
 
-    const apiKey = apiKeys[i % apiKeys.length];
     console.log(`[${i + 1}/${items.length}] generating ${item.id} ${item.title} -> ${outPath}`);
-    const image = await generateOne({ apiKey, prompt: promptFor(item) });
-    fs.writeFileSync(outPath, image);
+    try {
+      const result = await generateWithRetry({ apiKeys, startKeyIndex: keyCursor, prompt: promptFor(item) });
+      keyCursor = result.nextKeyIndex;
+      fs.writeFileSync(outPath, result.image);
+    } catch (error) {
+      console.log(`  failed: ${error.message}`);
+      appendFailure(item, error);
+    }
+
     if (i < items.length - 1 && DELAY_MS > 0) await sleep(DELAY_MS);
   }
 }
