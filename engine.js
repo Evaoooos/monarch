@@ -183,7 +183,7 @@ const CARDS=[
 {id:'c68',ch:'camp',tier:'deep',mp:2,theme:'沙场点兵',title:'渡河',t:'敌军隔河扎营。河水不深，却冷得刺骨。若趁夜渡河，明早你会站在他们背后，或躺在河底。',l:{t:'夜渡突袭。',f:{military:5,intel:-6,morale:-5},h:{ruthless:1}},r:{t:'搭桥稳进。',f:{military:5,food:-7,intel:5},h:{}}},
 {id:'c69',ch:'camp',tier:'deep',mp:2,theme:'百姓苍生',title:'碑文',t:'新立的战死碑还空着一半。石匠问要不要刻上敌军的名字，他说死人在地下未必还分阵营。',l:{t:'只刻己方。',f:{military:5,morale:-5},h:{}},r:{t:'一并刻上。',f:{morale:8,intel:-5},h:{righteous:1}}},
 {id:'c70',ch:'camp',tier:'deep',mp:2,theme:'幕帷之间',title:'献图',t:'一个哑巴乞儿献来王城外郭图。图画得极细，细到连巡夜狗窝都标了出来。没人知道他从哪来。',l:{t:'扣下乞儿。',f:{intel:5,morale:-5},h:{ruthless:1}},r:{t:'赏饭放走。',f:{intel:7,morale:5,food:-5},h:{righteous:1}}},
-{id:'c71',ch:'camp',tier:'rare',o:1,cm:42,theme:'攻城拔寨',title:'五城图',t:'五座城在地图上连成一线。幕僚说，线的尽头不是王座，而是一张会吞人的网。你听见帐外风吹旗角，像有人磨刀。',l:{t:'重排战线。',f:{intel:8,food:8,military:-5},h:{}},r:{t:'照旧推进。',f:{military:8,morale:5,intel:-6},h:{ruthless:1}}},
+{id:'c71',ch:'camp',tier:'rare',o:1,cm:42,theme:'幕帷之间',title:'五城图',t:'五座城在地图上连成一线。幕僚说，线的尽头不是王座，而是一张会吞人的网。你听见帐外风吹旗角，像有人磨刀。',l:{t:'重排战线。',f:{intel:8,food:8,military:-5},h:{}},r:{t:'照旧推进。',f:{military:8,morale:5,intel:-6},h:{ruthless:1}}},
 {id:'c72',ch:'camp',tier:'rare',o:1,mp:5,theme:'幕帷之间',title:'旧梦',t:'你在黎明前醒来，梦见自己曾经坐上王座，又亲手把王座推翻。案上的兵符很安静，像什么都记得。',l:{t:'压下此梦。',f:{military:5,intel:5},h:{}},r:{t:'记入密档。',f:{intel:5,morale:-5},h:{}}},
 {id:'c73',ch:'camp',tier:'base',o:1,theme:'沙场点兵',title:'军约',t:'新兵入营第一夜，几名老卒把军规背得滚瓜烂熟，却没人知道百姓被误伤时该怎么算。军法官问你，要不要把这条也写进军约。',l:{t:'立约三章。',f:{morale:6,intel:5,military:-5},h:{righteous:1},a:['c73b']},r:{t:'照旧军法。',f:{military:5,morale:-5},h:{ruthless:1}}},
 {id:'c73b',ch:'camp',tier:'deep',o:1,theme:'百姓苍生',title:'初犯',t:'军约刚贴出去，就有一名骑兵踩坏了农家的麦田。他哭着说是追敌误入，不是有心。田边围着百姓，也围着士兵。',l:{t:'按约赔罚。',f:{morale:5,intel:5,military:-5},h:{righteous:1},a:['c73c']},r:{t:'破例从轻。',f:{morale:5,intel:-5},h:{righteous:1}}},
@@ -193,10 +193,10 @@ const CARDS=[
 {id:'c74c',ch:'camp',tier:'rare',mp:2,o:1,theme:'幕帷之间',title:'名单',t:'密线最后送来一份名单。上面有敌城暗桩，也有你营中几个熟悉的名字。墨迹未干，帐外已经有人开始发抖。',l:{t:'只抓首恶。',f:{intel:5,morale:5,food:-5},h:{righteous:1}},r:{t:'一并清洗。',f:{intel:8,morale:-8},h:{ruthless:1}}},
 {id:'c75',ch:'camp',tier:'deep',mp:3,o:1,theme:'乱世之初',title:'旧碑',t:'攻下一座小寨后，你在荒草里发现一块无名旧碑。碑上没有姓名，只有一句被雨水磨浅的话：此路曾败。',l:{t:'立无名碑。',f:{morale:6,food:-5},h:{righteous:1},a:['c75b']},r:{t:'封存旧甲。',f:{military:5,intel:5,morale:-5},h:{}}},
 {id:'c75b',ch:'camp',tier:'deep',mp:3,o:1,theme:'乱世之初',title:'梦中败军',t:'那夜你梦见同一条山路，同一面折断的帅旗。醒来时，地图上的朱砂线被汗水晕开，像一场还没发生的败仗。',l:{t:'照梦改阵。',f:{military:5,intel:5,food:-5},h:{},a:['c75c']},r:{t:'梦只是梦。',f:{morale:5,intel:-5},h:{}}},
-{id:'c75c',ch:'camp',tier:'rare',mp:3,o:1,theme:'攻城拔寨',title:'重演',t:'后来你真的走到那条山路前。斥候说敌军就在坡后，副将说正面破过去最快。风吹过旧碑，像有人在很远处叹气。',l:{t:'避开旧路。',f:{intel:6,food:8,military:-5},h:{}},r:{t:'正面破局。',f:{military:6,morale:5,food:-5},h:{ruthless:1}}},
+{id:'c75c',ch:'camp',tier:'rare',mp:3,o:1,theme:'乱世之初',title:'重演',t:'后来你真的走到那条山路前。斥候说敌军就在坡后，副将说正面破过去最快。风吹过旧碑，像有人在很远处叹气。',l:{t:'避开旧路。',f:{intel:6,food:8,military:-5},h:{}},r:{t:'正面破局。',f:{military:6,morale:5,food:-5},h:{ruthless:1}}},
 {id:'c76',ch:'camp',tier:'base',o:1,theme:'百姓苍生',title:'义军',t:'城外来了一支自称义军的队伍。他们衣甲不整，却一路护送流民到城下。副将说他们难管，百姓说他们像自己人。',l:{t:'收编入营。',f:{military:6,morale:5,food:-5},h:{},a:['c76b']},r:{t:'给粮遣散。',f:{morale:6,food:-5},h:{righteous:1}}},
 {id:'c76b',ch:'camp',tier:'deep',o:1,theme:'沙场点兵',title:'义旗',t:'义军入营后仍打着自己的旗。新兵们喜欢那面旗，老将们却觉得营里多了一道不听号令的声音。',l:{t:'撤旗归编。',f:{military:5,intel:5,morale:-5},h:{ruthless:1},a:['c76c']},r:{t:'准其保旗。',f:{morale:7,military:-5,intel:-5},h:{righteous:1},a:['c76c']}},
-{id:'c76c',ch:'camp',tier:'rare',o:1,theme:'攻城拔寨',title:'先锋请战',t:'攻城前，义军首领请为先锋。他说他们不是为你卖命，是为城下那些还有家可回的人卖命。所有人都在等你的答复。',l:{t:'让他们先登。',f:{military:7,morale:-5},h:{ruthless:1}},r:{t:'让正规军并肩。',f:{military:5,morale:6,food:-5},h:{righteous:1}}},
+{id:'c76c',ch:'camp',tier:'rare',o:1,theme:'沙场点兵',title:'先锋请战',t:'攻城前，义军首领请为先锋。他说他们不是为你卖命，是为城下那些还有家可回的人卖命。所有人都在等你的答复。',l:{t:'让他们先登。',f:{military:7,morale:-5},h:{ruthless:1}},r:{t:'让正规军并肩。',f:{military:5,morale:6,food:-5},h:{righteous:1}}},
 {id:'c77',ch:'camp',tier:'base',o:1,theme:'百姓苍生',title:'盐引',t:'盐商联名求见，说只要给他们三年盐引，愿意立刻借粮给军中。百姓在门外等盐价，军需官在门内等粮车。',l:{t:'准三年盐引。',f:{food:8,morale:-5,intel:-5},h:{},a:['c77b']},r:{t:'只准一年。',f:{food:8,intel:5,morale:-5},h:{},a:['c77b']}},
 {id:'c77b',ch:'camp',tier:'deep',o:1,theme:'幕帷之间',title:'盐船',t:'第一批盐船抵达时，船底夹着几箱私铁。盐商说那是护船兵器，管税吏却看见了敌城的火漆。',l:{t:'扣船查账。',f:{intel:7,food:-5,morale:5},h:{},a:['c77c']},r:{t:'装作没看见。',f:{food:6,intel:-5,morale:-5},h:{ruthless:1},a:['c77c']}},
 {id:'c77c',ch:'camp',tier:'rare',o:1,theme:'百姓苍生',title:'盐价',t:'盐价终于降了，却有人发现账本里少了一行名字。那一行对应的村子，正好在敌军行路图上。',l:{t:'公开审盐商。',f:{morale:6,intel:5,food:-5},h:{righteous:1}},r:{t:'秘密换掉他们。',f:{intel:8,morale:-5},h:{ruthless:1}}},
@@ -207,14 +207,14 @@ const CARDS=[
 {id:'c79b',ch:'camp',tier:'deep',o:1,theme:'幕帷之间',title:'说书人',t:'线索指向一个说书人。他在茶摊讲你的故事，讲得比战报还真。问他从哪听来，他只指了指满座的听客。',l:{t:'带回幕府。',f:{intel:7,morale:-5},h:{ruthless:1},a:['c79c']},r:{t:'请他继续讲。',f:{morale:6,intel:5,food:-5},h:{},a:['c79c']}},
 {id:'c79c',ch:'camp',tier:'rare',o:1,theme:'百姓苍生',title:'新词',t:'几日后，城里换了新词。有人唱你仁厚，有人唱你残忍，更多人只是借着调子问：下一座城，会死谁？',l:{t:'改词安民。',f:{morale:7,intel:-5,food:-5},h:{righteous:1}},r:{t:'借词惑敌。',f:{intel:8,morale:-5},h:{}}},
 {id:'c80',ch:'camp',tier:'deep',mp:2,o:1,theme:'幕帷之间',title:'借刀',t:'邻国使者暗中送来一封信，愿借你兵马去除共同的敌人。信末没有署名，只有一枚很新很干净的血印。',l:{t:'烧信拒绝。',f:{morale:5,intel:5,military:-5},h:{}},r:{t:'借刀一试。',f:{military:6,intel:-7,morale:-5},h:{ruthless:1},a:['c80b']}},
-{id:'c80b',ch:'camp',tier:'deep',mp:2,o:1,theme:'攻城拔寨',title:'夜火',t:'那支借来的兵马夜里烧了敌军粮仓，也烧了三户民宅。使者说乱军难免，百姓说火不会认旗。',l:{t:'赔民宅。',f:{morale:6,food:-5,intel:5},h:{righteous:1},a:['c80c']},r:{t:'压下火案。',f:{military:5,intel:5,morale:-7},h:{ruthless:1},a:['c80c']}},
+{id:'c80b',ch:'camp',tier:'deep',mp:2,o:1,theme:'幕帷之间',title:'夜火',t:'那支借来的兵马夜里烧了敌军粮仓，也烧了三户民宅。使者说乱军难免，百姓说火不会认旗。',l:{t:'赔民宅。',f:{morale:6,food:-5,intel:5},h:{righteous:1},a:['c80c']},r:{t:'压下火案。',f:{military:5,intel:5,morale:-7},h:{ruthless:1},a:['c80c']}},
 {id:'c80c',ch:'camp',tier:'rare',mp:2,o:1,theme:'幕帷之间',title:'还刀',t:'使者来索还人情。他不要粮，不要城，只要你在下一封战书上慢一天落印。幕僚听完，脸色比纸还白。',l:{t:'撕毁旧约。',f:{intel:5,morale:5,military:-5},h:{}},r:{t:'拖延一日。',f:{food:8,intel:-6,morale:-5},h:{}}},
 {id:'c81',ch:'camp',tier:'deep',mp:2,o:1,theme:'沙场点兵',title:'边盟',t:'边地三寨愿与你结盟。他们能出骑兵，也能断敌粮道，但要求保留自己的法和仇。',l:{t:'以军法收盟。',f:{military:6,intel:5,morale:-5},h:{ruthless:1},a:['c81b']},r:{t:'以盟约相待。',f:{military:5,morale:5,food:-5},h:{righteous:1},a:['c81b']}},
 {id:'c81b',ch:'camp',tier:'deep',mp:2,o:1,theme:'百姓苍生',title:'旧仇',t:'边寨骑兵抓到一名仇家的少年，说按他们的法，该拿血还血。少年跪在你面前，听不懂中原话，只知道害怕。',l:{t:'按中原法审。',f:{morale:6,intel:5,military:-5},h:{righteous:1},a:['c81c']},r:{t:'尊边寨旧法。',f:{military:5,morale:-6},h:{ruthless:1},a:['c81c']}},
-{id:'c81c',ch:'camp',tier:'rare',mp:2,o:1,theme:'攻城拔寨',title:'边鼓',t:'大战前夜，边寨骑兵敲起自己的鼓。鼓声和你的战鼓不合拍，却让敌军整夜没敢合眼。',l:{t:'并鼓齐进。',f:{military:7,morale:5,food:-5},h:{}},r:{t:'令其侧袭。',f:{military:5,intel:5,morale:-5},h:{}}},
+{id:'c81c',ch:'camp',tier:'rare',mp:2,o:1,theme:'沙场点兵',title:'边鼓',t:'大战前夜，边寨骑兵敲起自己的鼓。鼓声和你的战鼓不合拍，却让敌军整夜没敢合眼。',l:{t:'并鼓齐进。',f:{military:7,morale:5,food:-5},h:{}},r:{t:'令其侧袭。',f:{military:5,intel:5,morale:-5},h:{}}},
 {id:'c82',ch:'camp',tier:'rare',mp:3,o:1,theme:'乱世之初',title:'遗诏',t:'旧朝遗诏在一只夹层匣里露出半角。它承认了你父亲的功，也承认了他不该知道的秘密。',l:{t:'藏入密库。',f:{intel:7,morale:-5},h:{},a:['c82b']},r:{t:'召幕僚共读。',f:{intel:5,morale:5,food:-5},h:{},a:['c82b']}},
 {id:'c82b',ch:'camp',tier:'deep',mp:3,o:1,theme:'幕帷之间',title:'旧臣',t:'读过遗诏后，几个旧臣连夜登门。他们称你为少主，声音恭敬得像一把蒙着布的刀。',l:{t:'收作顾问。',f:{intel:6,food:-5,morale:5},h:{},a:['c82c']},r:{t:'逐出城去。',f:{morale:-5,intel:5,military:5},h:{ruthless:1}}},
-{id:'c82c',ch:'camp',tier:'rare',mp:3,o:1,theme:'攻城拔寨',title:'旧旗',t:'旧臣献出一面旧朝王旗。举它，许多城门会动摇；不举它，你仍只是破城里走出的年轻将军。',l:{t:'举旧旗惑城。',f:{intel:7,morale:-6,military:5},h:{}},r:{t:'只举自己的旗。',f:{morale:6,military:5,intel:-7},h:{}}},
+{id:'c82c',ch:'camp',tier:'rare',mp:3,o:1,theme:'乱世之初',title:'旧旗',t:'旧臣献出一面旧朝王旗。举它，许多城门会动摇；不举它，你仍只是破城里走出的年轻将军。',l:{t:'举旧旗惑城。',f:{intel:7,morale:-6,military:5},h:{}},r:{t:'只举自己的旗。',f:{morale:6,military:5,intel:-7},h:{}}},
 {id:'c83',ch:'camp',tier:'rare',mp:4,o:1,theme:'幕帷之间',title:'无名军师',t:'一个戴斗笠的人在雨里等你。他只说三句话，就指出你军中两处死穴。问他姓名，他说名字会让人懒得思考。',l:{t:'请入幕府。',f:{intel:8,food:-5,morale:-5},h:{},a:['c83b']},r:{t:'赏金送走。',f:{intel:5,food:-5},h:{}}},
 {id:'c83b',ch:'camp',tier:'deep',mp:4,o:1,theme:'幕帷之间',title:'三策',t:'无名军师献上三策：上策慢，中策险，下策快。副将喜欢下策，粮官喜欢上策，而他只看着你。',l:{t:'取上策。',f:{food:8,intel:5,military:-5},h:{},a:['c83c']},r:{t:'取中策。',f:{military:5,intel:5,morale:-5},h:{},a:['c83c']}},
 {id:'c83c',ch:'camp',tier:'rare',mp:4,o:1,theme:'乱世之初',title:'无名之名',t:'计成之后，他把斗笠留在案上，人却不见了。斗笠内侧写着你父亲的笔迹：若他来，不要全信，也不要不信。',l:{t:'查他的来路。',f:{intel:8,morale:-5,food:-5},h:{}},r:{t:'留他的空席。',f:{morale:5,intel:5,military:-5},h:{}}},
@@ -227,9 +227,9 @@ const CARDS=[
 {id:'c90',ch:'camp',tier:'base',theme:'幕帷之间',title:'墨迹',t:'一份军令上的墨迹被水晕开，最后一个字像退，也像进。传令兵跪在地上，等你给它一个确定的意思。',l:{t:'按进字办。',f:{military:5,intel:-7,morale:5},h:{ruthless:1}},r:{t:'重发军令。',f:{intel:6,food:-5},h:{}}},
 {id:'c91',ch:'camp',tier:'base',theme:'幕帷之间',title:'棋客',t:'幕府来了个棋客，连胜三名谋士。他不求官，只求在沙盘边坐一晚。你的亲兵不喜欢他的眼神。',l:{t:'许他旁观。',f:{intel:7,morale:-5},h:{}},r:{t:'只留棋谱。',f:{intel:5,food:-5,morale:5},h:{}}},
 {id:'c92',ch:'camp',tier:'base',theme:'幕帷之间',title:'错名',t:'阵亡名册上多了一个活人的名字。那士兵站在门口，脸色白得像已经死过一次。书吏说只是笔误。',l:{t:'彻查名册。',f:{intel:6,morale:5,food:-5},h:{}},r:{t:'改了便是。',f:{military:5,intel:-7,morale:-5},h:{}}},
-{id:'c93',ch:'war',tier:'deep',theme:'攻城拔寨',title:'云梯',t:'攻城匠造出一架新云梯，轻便却不够稳。试梯的新兵爬到一半，手心全是汗。',l:{t:'先试十架。',f:{military:5,food:-5,intel:5},h:{}},r:{t:'稳妥加固。',f:{military:5,food:-5,morale:5},h:{}}},
-{id:'c94',ch:'war',tier:'deep',theme:'攻城拔寨',title:'壕沟',t:'敌城外挖了两道壕沟。填壕要木料和人命，绕路则会多耗半月粮草。',l:{t:'夜里填壕。',f:{military:5,morale:-5,intel:5},h:{ruthless:1}},r:{t:'绕西坡走。',f:{food:-6,intel:5},h:{}}},
-{id:'c95',ch:'war',tier:'deep',theme:'攻城拔寨',title:'降书',t:'城上射下一封降书，说愿开东门，但要保全守将家眷。副将怀疑是拖延，粮官却看向越来越空的车队。',l:{t:'答应条件。',f:{morale:5,intel:5,food:-5},h:{}},r:{t:'继续围困。',f:{military:5,food:-5,morale:-5},h:{ruthless:1}}},
+{id:'c93',ch:'war',tier:'deep',theme:'沙场点兵',title:'云梯',t:'攻城匠造出一架新云梯，轻便却不够稳。试梯的新兵爬到一半，手心全是汗。',l:{t:'先试十架。',f:{military:5,food:-5,intel:5},h:{}},r:{t:'稳妥加固。',f:{military:5,food:-5,morale:5},h:{}}},
+{id:'c94',ch:'war',tier:'deep',theme:'沙场点兵',title:'壕沟',t:'敌城外挖了两道壕沟。填壕要木料和人命，绕路则会多耗半月粮草。',l:{t:'夜里填壕。',f:{military:5,morale:-5,intel:5},h:{ruthless:1}},r:{t:'绕西坡走。',f:{food:-6,intel:5},h:{}}},
+{id:'c95',ch:'war',tier:'deep',theme:'幕帷之间',title:'降书',t:'城上射下一封降书，说愿开东门，但要保全守将家眷。副将怀疑是拖延，粮官却看向越来越空的车队。',l:{t:'答应条件。',f:{morale:5,intel:5,food:-5},h:{}},r:{t:'继续围困。',f:{military:5,food:-5,morale:-5},h:{ruthless:1}}},
 {id:'c96',ch:'camp',tier:'deep',mp:2,theme:'乱世之初',title:'旧靴',t:'库房翻出一双旧靴，靴底还嵌着边关的黑泥。老兵说那是你父亲年轻时穿过的，没人敢擦干净。',l:{t:'供在帅帐。',f:{morale:5,military:5,intel:-5},h:{}},r:{t:'赏给老兵。',f:{morale:6,food:-5},h:{righteous:1}}},
 {id:'c97',ch:'camp',tier:'deep',mp:2,theme:'乱世之初',title:'乳名',t:'一个老仆醉后喊出了你的乳名，满帐忽然安静。那名字像从很久以前滚出来，撞在现在的兵甲上。',l:{t:'罚他失礼。',f:{military:5,morale:-5,intel:5},h:{ruthless:1}},r:{t:'扶他醒酒。',f:{morale:5,food:-5},h:{righteous:1}}},
 {id:'c98',ch:'camp',tier:'deep',mp:3,theme:'乱世之初',title:'旧铃',t:'父亲留下的马铃忽然响了。没有风，也没有马。守夜人说他听见铃声里夹着行军号。',l:{t:'挂上战马。',f:{military:5,morale:5,intel:-5},h:{}},r:{t:'收入密匣。',f:{intel:6,morale:-5},h:{}}},
@@ -247,8 +247,8 @@ const CARDS=[
 {id:'c110',ch:'camp',tier:'base',theme:'幕帷之间',title:'密狱',t:'情报头子请求设一处密狱，专审内奸。它能让消息变快，也能让每个人说话前先摸一摸自己的脖子。',l:{t:'设密狱。',f:{intel:15,morale:-12,food:-5},h:{ruthless:1}},r:{t:'禁私刑。',f:{intel:-12,morale:9},h:{righteous:1}}},
 {id:'c111',ch:'camp',tier:'base',theme:'幕帷之间',title:'伪报',t:'你抓到一名会写敌军文书的人。他能替你造一封足以乱城的伪报，但若露馅，所有密线都会被反咬。',l:{t:'伪报乱敌。',f:{intel:13,morale:-6,food:-5},h:{}},r:{t:'不用险招。',f:{intel:-10,morale:5,military:5},h:{}}},
 {id:'c112',ch:'camp',tier:'base',theme:'幕帷之间',title:'焚图',t:'几张旧地图互相矛盾，谁也说不清哪张是真的。烧掉旧图重绘，需要时间；照旧图出兵，需要运气。',l:{t:'烧图重绘。',f:{intel:11,food:-9,military:-5},h:{}},r:{t:'照图疾行。',f:{military:5,intel:-14,morale:-5},h:{ruthless:1}}},
-{id:'c113',ch:'camp',tier:'base',theme:'攻城拔寨',title:'血梯',t:'攻城匠造出一批轻梯，能在夜里悄悄架上城墙。它们太轻，也太容易断，像一条条通往城头的薄命。',l:{t:'夜架血梯。',f:{military:10,intel:5,morale:-12},h:{ruthless:1}},r:{t:'白日稳攻。',f:{military:-8,food:-8,morale:6},h:{}}},
-{id:'c114',ch:'camp',tier:'base',theme:'攻城拔寨',title:'火攻',t:'风向正好，火油也足。谋士说今夜一把火能烧开城门，医官说风从来不只听一个人的命令。',l:{t:'纵火破门。',f:{military:10,food:-8,morale:-10},h:{ruthless:1}},r:{t:'弃火围城。',f:{food:-12,intel:6,morale:5},h:{}}},
+{id:'c113',ch:'camp',tier:'base',theme:'沙场点兵',title:'血梯',t:'攻城匠造出一批轻梯，能在夜里悄悄架上城墙。它们太轻，也太容易断，像一条条通往城头的薄命。',l:{t:'夜架血梯。',f:{military:10,intel:5,morale:-12},h:{ruthless:1}},r:{t:'白日稳攻。',f:{military:-8,food:-8,morale:6},h:{}}},
+{id:'c114',ch:'camp',tier:'base',theme:'沙场点兵',title:'火攻',t:'风向正好，火油也足。谋士说今夜一把火能烧开城门，医官说风从来不只听一个人的命令。',l:{t:'纵火破门。',f:{military:10,food:-8,morale:-10},h:{ruthless:1}},r:{t:'弃火围城。',f:{food:-12,intel:6,morale:5},h:{}}},
 {id:'c115',ch:'camp',tier:'base',theme:'沙场点兵',title:'死士',t:'有三百人愿签死士册。签下名字，他们明日就会冲在最前；不签，他们也许能活到下一场雪。',l:{t:'收死士册。',f:{military:10,morale:-13,food:-5},h:{ruthless:1}},r:{t:'撕掉册子。',f:{military:-50,morale:10},h:{righteous:1}}},
 {id:'c116',ch:'camp',tier:'base',theme:'百姓苍生',title:'赦令',t:'牢里关着一批轻罪犯，放出来能补工、补兵、补荒田。百姓害怕他们，军中也不愿和他们同锅吃饭。',l:{t:'大赦充役。',f:{food:9,military:7,morale:-12},h:{}},r:{t:'按律不赦。',f:{morale:6,military:-7,food:-5},h:{righteous:1}}},
 {id:'c117',ch:'camp',tier:'base',theme:'幕帷之间',title:'疑案',t:'一夜之间，三名幕僚互相指认通敌。证词都像真的，证据也都像假的。你忽然发现，刀比真相来得快。',l:{t:'一并下狱。',f:{intel:10,morale:-15},h:{ruthless:1}},r:{t:'全数放回。',f:{intel:-13,morale:8,food:-5},h:{}}},
@@ -263,11 +263,11 @@ const CARDS=[
 {id:'c126',ch:'camp',tier:'base',theme:'幕帷之间',title:'粮印',t:'空白粮印流入市面，有人用它换走了半条街的米。若你承认这些粮印，粮会立刻进仓；若不承认，信用就会先碎。',l:{t:'照印收粮。',f:{food:14,intel:-8,morale:-6},h:{}},r:{t:'废印追查。',f:{intel:8,food:-5,morale:5},h:{righteous:1}}},
 {id:'c127',ch:'camp',tier:'base',theme:'百姓苍生',title:'麦雨',t:'连日好雨，城外麦浪一夜之间高过膝盖。百姓说这是天赐丰年，粮官却低声提醒你：天赐的东西，也可以先归军中。',l:{t:'先收军粮。',f:{food:12,morale:-9},h:{ruthless:1}},r:{t:'留足民食。',f:{food:6,morale:5},h:{righteous:1}}},
 
-{id:'siege_1',ch:'war',tier:'rare',o:1,cm:8,theme:'攻城拔寨',title:'枯骨关',t:'斥候来报：边陲小镇守军不足五百，城墙年久失修。这是你踏上霸业的第一步——或者第一个坟墓。你的士兵们握紧了手中的刀。',l:{t:'养精蓄锐。',f:{military:5,morale:5},h:{}},r:{t:'出兵。',f:{},h:{},siege:{city:1,req:{military:10},win:{f:{food:8,morale:5},npc:'aman'},lose:{die:'end_defeat_1'}}}},
-{id:'siege_2',ch:'war',tier:'rare',o:1,cm:18,theme:'攻城拔寨',title:'金沙渡',t:'第二座城是商贸重镇。城墙上站满了雇佣兵，城内粮草充足。这一仗不仅拼刀剑，还拼后勤。',l:{t:'再等等。',f:{intel:5,food:8},h:{}},r:{t:'全军压上。',f:{},h:{},siege:{city:2,req:{military:10,food:40},win:{f:{food:8,intel:5},npc:'hongsiu'},lose:{die:'end_defeat_2'}}}},
+{id:'siege_1',ch:'war',tier:'rare',o:1,cm:8,theme:'攻城拔寨',title:'枯骨关',t:'斥候来报：边陲小镇守军不足五百，城墙年久失修。这是你踏上霸业的第一步——或者第一个坟墓。你的士兵们握紧了手中的刀。',l:{t:'养精蓄锐。',f:{military:5,morale:5},h:{}},r:{t:'出兵。',f:{},h:{},siege:{city:1,req:{military:40},win:{f:{food:8,morale:5},npc:'aman'},lose:{die:'end_defeat_1'}}}},
+{id:'siege_2',ch:'war',tier:'rare',o:1,cm:18,theme:'攻城拔寨',title:'金沙渡',t:'第二座城是商贸重镇。城墙上站满了雇佣兵，城内粮草充足。这一仗不仅拼刀剑，还拼后勤。',l:{t:'再等等。',f:{intel:5,food:8},h:{}},r:{t:'全军压上。',f:{},h:{},siege:{city:2,req:{military:50,food:40},win:{f:{food:8,intel:5},npc:'hongsiu'},lose:{die:'end_defeat_2'}}}},
 {id:'siege_3',ch:'war',tier:'rare',o:1,cm:28,theme:'攻城拔寨',title:'墨渊阁',t:'第三座城不靠武力。学宫之城的城门永远敞开，但里面的谋士设下了七层连环计。',l:{t:'从长计议。',f:{intel:8},h:{}},r:{t:'以智取之。',f:{},h:{},siege:{city:3,req:{intel:55,morale:45},win:{f:{intel:5,morale:5},npc:'qingzhao'},lose:{die:'end_defeat_3'}}}},
 {id:'siege_4',ch:'war',tier:'rare',o:1,cm:38,theme:'攻城拔寨',title:'天枢殿',t:'圣城的城墙上站的不是士兵，是信徒。他们不怕死——他们以为死了会上天堂。',l:{t:'绕道而行。',f:{morale:5},h:{}},r:{t:'攻心为上。',f:{},h:{},siege:{city:4,req:{morale:55,intel:50},win:{f:{morale:5,intel:5},npc:'wuyue'},lose:{die:'end_defeat_4'}}}},
-{id:'siege_5',ch:'war',tier:'rare',o:1,cm:50,theme:'攻城拔寨',title:'龙椅台',t:'最后一座城。王城的城墙高耸入云，护城河宽如江河。里面的人在等你，外面的人也在等你。这是最后一战。',l:{t:'……我还没准备好。',f:{military:5,food:8},h:{}},r:{t:'即刻攻城',f:{},h:{},siege:{city:5,req:{military:10,food:55,morale:55,intel:55},win:{f:{}},lose:{die:'end_defeat_5'}}}},
+{id:'siege_5',ch:'war',tier:'rare',o:1,cm:50,theme:'攻城拔寨',title:'龙椅台',t:'最后一座城。王城的城墙高耸入云，护城河宽如江河。里面的人在等你，外面的人也在等你。这是最后一战。',l:{t:'……我还没准备好。',f:{military:5,food:8},h:{}},r:{t:'即刻攻城',f:{},h:{},siege:{city:5,req:{military:55,food:55,morale:55,intel:55},win:{f:{}},lose:{die:'end_defeat_5'}}}},
 
 {id:'npc_aman',ch:'aman',tier:'rare',o:1,theme:'帷帐春深',title:'蛮族战俘',t:'在战俘中，一个浑身是伤的蛮族女子格外引人注目。她被五个士兵按着仍在挣扎，像一匹不肯被驯服的野马。她抬头看你，眼里没有恐惧——只有挑衅。',l:{t:'放她回草原。',f:{morale:5},h:{righteous:1}},r:{t:'留在帐中。',f:{military:5,morale:-5},h:{lust:1},fl:'aman_recruited',activate:'aman'}},
 {id:'npc_hongsiu',ch:'hongsiu',tier:'rare',o:1,theme:'帷帐春深',title:'商会千金',t:'城破之日，商会大小姐主动求见。她穿着绸缎走进满是血腥的中军帐，微笑着递上一份城中所有商铺的账本。"将军，做生意吗？"',l:{t:'不需要商人。',f:{food:8},h:{righteous:1}},r:{t:'有意思。留下。',f:{intel:5},h:{lust:1},fl:'hongsiu_recruited',activate:'hongsiu'}},
@@ -395,6 +395,49 @@ const CARDS=[
 {id:'d18',ch:'camp',tier:'drain',mp:2,theme:'幕帷之间',title:'错判',t:'你之前采信的一份情报错了。损失不大，却足够让所有人说话慢半拍。错判像一根刺，扎在沙盘中央。',l:{t:'重审探线。',f:{intel:-7,food:-5},h:{}},r:{t:'换掉探头。',f:{intel:-5,morale:-5},h:{}}},
 {id:'d19',ch:'camp',tier:'drain',mp:2,theme:'沙场点兵',title:'散阵',t:'新阵法练到一半，前队和后队撞在一起。没有人死，但每个将领的脸都像刚输了一仗。',l:{t:'推倒重练。',f:{military:-5,food:-5},h:{}},r:{t:'改回旧阵。',f:{military:-5,intel:-6},h:{}}},
 {id:'d20',ch:'camp',tier:'drain',mp:2,theme:'百姓苍生',title:'疫巷',t:'一条巷子被白布封住，里面的人拍门求水。开门会让疫病扩散，不开门会让哭声先死在门后。',l:{t:'封巷七日。',f:{morale:-8,intel:-5},h:{}},r:{t:'送水送药。',f:{food:-5,military:-5},h:{}}},
+
+// ─── 新增：NPC 羁绊卡 · 阿蛮 ───
+{id:'am16',ch:'aman',tier:'base',theme:'帷帐春深',title:'马酒',t:'阿蛮酿了一坛马奶酒，说草原的男人喝完这个才敢开口求亲。她把碗推到你面前，眼睛却看着帐顶。',l:{t:'公事在身。',f:{intel:5},h:{aman_aff:-5}},r:{t:'一饮而尽。',f:{morale:5,food:-5},h:{aman_aff:10,romance:1}},npc_req:'aman'},
+{id:'am17',ch:'aman',tier:'base',theme:'沙场点兵',title:'断鬃',t:'她最爱的战马被流矢伤了鬃。阿蛮蹲在马旁很久，回头问你，中原人会不会为一匹马掉眼泪。',l:{t:'换匹新马。',f:{military:5},h:{aman_aff:-6}},r:{t:'陪她守夜。',f:{morale:5,intel:-5},h:{aman_aff:9,romance:1}},npc_req:'aman'},
+{id:'am18',ch:'aman',tier:'deep',mp:2,o:1,ca:{aman_aff:55},theme:'帷帐春深',title:'北使',t:'草原来了使者，跪在阿蛮面前，说老王死了，部族要她回去继位。她没看使者，只看你。',l:{t:'你该回去。',f:{morale:-5,intel:5},h:{aman_aff:-5,righteous:1},a:['am18b']},r:{t:'留下来。',f:{military:5,morale:5},h:{aman_aff:10},a:['am18b']},npc_req:'aman'},
+{id:'am18b',ch:'aman',tier:'deep',o:1,theme:'帷帐春深',title:'两鞭',t:'使者留下两条马鞭：一条系着草原的狼尾，一条是你帐中的旧物。阿蛮把两条都攥在手里，指节发白。',l:{t:'替她选草原。',f:{intel:5,morale:-5},h:{aman_aff:-3,righteous:1},a:['am18c']},r:{t:'让她自己选。',f:{morale:5},h:{aman_aff:8},a:['am18c']},npc_req:'aman'},
+{id:'am18c',ch:'aman',tier:'rare',o:1,theme:'帷帐春深',title:'断尾',t:'阿蛮当着使者的面，把狼尾鞭扔进火里。她说草原会记住每个人的名字，但她要先记住自己想留在哪。火光照着她的脸，没有半分犹豫。',l:{t:'那就并肩。',f:{military:6,morale:5},h:{aman_aff:12}},r:{t:'给她退路。',f:{morale:6,intel:5},h:{aman_aff:10,righteous:1}},npc_req:'aman'},
+
+// ─── 新增：NPC 羁绊卡 · 红袖 ───
+{id:'hs16',ch:'hongsiu',tier:'base',theme:'帷帐春深',title:'分红',t:'红袖把一年的商利摊在案上，推一半给你。她说生意场上没有白拿的钱，问你敢不敢收。',l:{t:'充入军库。',f:{food:8},h:{hongsiu_aff:-4}},r:{t:'与她对半。',f:{food:5,intel:5},h:{hongsiu_aff:9}},npc_req:'hongsiu'},
+{id:'hs17',ch:'hongsiu',tier:'base',theme:'幕帷之间',title:'假票',t:'市面上混进一批假银票，仿的正是红袖的票号。她捏着假票冷笑，说有人想借她的信用买命。',l:{t:'官府查办。',f:{intel:6},h:{hongsiu_aff:5}},r:{t:'让她去查。',f:{intel:8,food:-5},h:{hongsiu_aff:8,ruthless:1}},npc_req:'hongsiu'},
+{id:'hs18',ch:'hongsiu',tier:'deep',mp:2,o:1,ca:{hongsiu_aff:55},theme:'幕帷之间',title:'大单',t:'红袖说她能吃下敌国一整批军需，转手让敌军无粮可调。但要押上商会三年的本钱，也押上她自己的命。',l:{t:'太险，不做。',f:{food:5,intel:5},h:{hongsiu_aff:-3}},r:{t:'押上去。',f:{food:-5,intel:5},h:{hongsiu_aff:10},a:['hs18b']},npc_req:'hongsiu'},
+{id:'hs18b',ch:'hongsiu',tier:'deep',o:1,theme:'帷帐春深',title:'断链',t:'货押到一半，敌国察觉封了商路。红袖的护卫死了三个，她自己也在回来的路上崴了脚，账册却抱得死紧。',l:{t:'弃货保人。',f:{food:-5,morale:5},h:{hongsiu_aff:12,righteous:1},a:['hs18c']},r:{t:'货比人重。',f:{food:8,morale:-6},h:{hongsiu_aff:-5,ruthless:1},a:['hs18c']},npc_req:'hongsiu'},
+{id:'hs18c',ch:'hongsiu',tier:'rare',o:1,theme:'帷帐春深',title:'清账',t:'生意成了，敌军那个冬天没能调出一粒粮。红袖把最后一页账推给你，上面只写了一行字：这一单，算我送你的。',l:{t:'记她头功。',f:{food:8,intel:5},h:{hongsiu_aff:8}},r:{t:'问她图什么。',f:{intel:6},h:{hongsiu_aff:10,romance:1}},npc_req:'hongsiu'},
+
+// ─── 新增：NPC 羁绊卡 · 清越（多周目线索）───
+{id:'qz16',ch:'qingzhao',tier:'base',theme:'帷帐春深',title:'旧谱',t:'清越在修补一卷残破的乐谱，说这是旧国宫里最后的曲子。她哼了两句就停了，说后半阙再没人记得。',l:{t:'乐谱无用。',f:{intel:5},h:{qingzhao_aff:-5}},r:{t:'替她补谱。',f:{morale:5,intel:-5},h:{qingzhao_aff:9,romance:1}},npc_req:'qingzhao'},
+{id:'qz17',ch:'qingzhao',tier:'base',theme:'百姓苍生',title:'错韵',t:'她教孩子们念诗，一个孩子把你的名字编进了韵脚。清越愣了一下，没有纠正，只把那句多念了一遍。',l:{t:'不必如此。',f:{intel:5},h:{qingzhao_aff:-3}},r:{t:'由她去念。',f:{morale:5},h:{qingzhao_aff:8,romance:1}},npc_req:'qingzhao'},
+{id:'qz18',ch:'qingzhao',tier:'deep',mp:2,o:1,ca:{qingzhao_aff:55},theme:'幕帷之间',title:'故人',t:'一个旧国遗民找到清越，说只要她肯回去，断剑还能再铸。她把那人请进帐，却让你也坐下旁听。',l:{t:'我先回避。',f:{intel:5},h:{qingzhao_aff:5},a:['qz18b']},r:{t:'留下来听。',f:{intel:6,morale:-5},h:{qingzhao_aff:8},a:['qz18b']},npc_req:'qingzhao'},
+{id:'qz18b',ch:'qingzhao',tier:'deep',mp:2,o:1,theme:'幕帷之间',title:'旧约',t:'遗民说出一个名字——那是当年攻破她故国时，签下密约的人。清越看着你，眼神里第一次有了你读不懂的东西。',t2:'遗民说出那个名字时，你的心沉了下去。你已经走过太多遍这条路，早就知道那个名字属于谁：你的父亲。清越看着你，像在等你先开口。',t2_req:['end_qingzhao_sub','end_qingzhao_fall'],l:{t:'这与你无关。',f:{intel:5,morale:-5},h:{qingzhao_aff:-5,ruthless:1},a:['qz18c']},r:{t:'我替父认账。',f:{morale:6},h:{qingzhao_aff:10,righteous:1},a:['qz18c']},npc_req:'qingzhao'},
+{id:'qz18c',ch:'qingzhao',tier:'rare',mp:2,o:1,theme:'帷帐春深',title:'不寄',t:'清越写了一封信，写给那个早已不在的故国。写完，她没有寄出，而是折成一只纸船，放进护城河。她说，有些账，记下来就够了。',l:{t:'替她记下。',f:{intel:6,morale:5},h:{qingzhao_aff:12}},r:{t:'陪她送船。',f:{morale:6},h:{qingzhao_aff:10,romance:1,lust:1}},npc_req:'qingzhao'},
+
+// ─── 新增：NPC 羁绊卡 · 巫月 ───
+{id:'wy16',ch:'wuyue',tier:'base',theme:'帷帐春深',title:'卦象',t:'巫月替你卜了一卦，卦成却不肯说。你追问，她只说有些话说出来就会成真，问你还想不想听。',l:{t:'不必说了。',f:{intel:5},h:{wuyue_aff:5}},r:{t:'说给我听。',f:{morale:5,intel:-5},h:{wuyue_aff:9,romance:1}},npc_req:'wuyue'},
+{id:'wy17',ch:'wuyue',tier:'base',theme:'帷帐春深',title:'守夜',t:'夜里你惊醒，看见巫月坐在帐外。她说你梦里喊了一个名字，她怕那名字招来不该来的东西，便替你守着。',l:{t:'不过是梦。',f:{intel:5},h:{wuyue_aff:-3}},r:{t:'让她进来。',f:{morale:5},h:{wuyue_aff:10,romance:1}},npc_req:'wuyue'},
+{id:'wy18',ch:'wuyue',tier:'deep',mp:2,o:1,ca:{wuyue_aff:55},theme:'帷帐春深',title:'神谕',t:'巫月闭眼良久，睁眼时声音不像她自己。她说旧神要一个名字，写进祭文的人，能换全军一场大胜。',l:{t:'写敌将名。',f:{military:5,intel:-5},h:{wuyue_aff:5,ruthless:1},a:['wy18b']},r:{t:'不信神谕。',f:{intel:6,morale:-5},h:{wuyue_aff:-5},a:['wy18b']},npc_req:'wuyue'},
+{id:'wy18b',ch:'wuyue',tier:'deep',o:1,theme:'帷帐春深',title:'空名',t:'祭文写好那夜，巫月发起高烧，呓语里全是别人的名字。医官说她在替谁挡灾。你掀开帐帘，祭坛上的火还亮着。',l:{t:'灭了那火。',f:{morale:5,intel:5},h:{wuyue_aff:12,righteous:1},a:['wy18c']},r:{t:'让火烧完。',f:{military:5,morale:-5},h:{wuyue_aff:-3,ruthless:1},a:['wy18c']},npc_req:'wuyue'},
+{id:'wy18c',ch:'wuyue',tier:'rare',o:1,theme:'帷帐春深',title:'退位',t:'烧退后，巫月把祭司的银冠埋进了土里。她说神明问她要名字时，她写了自己的，又划掉了。她说这一次，她想替自己活。',l:{t:'那就活着。',f:{morale:6,intel:5},h:{wuyue_aff:12}},r:{t:'我陪你活。',f:{morale:6},h:{wuyue_aff:10,romance:1,lust:1}},npc_req:'wuyue'},
+
+// ─── 新增：连环事件链 · 质子 ───
+{id:'c128',ch:'camp',tier:'deep',o:1,theme:'幕帷之间',title:'质子',t:'敌城送来一个孩子做质子，说是城主幼子。他穿着不合身的锦袍，站在中军帐里一句话不说，只盯着你腰间的刀。',l:{t:'严加看管。',f:{intel:6,morale:-5},h:{ruthless:1},a:['c128b']},r:{t:'以礼相待。',f:{morale:6,food:-5},h:{righteous:1},a:['c128b']}},
+{id:'c128b',ch:'camp',tier:'deep',o:1,theme:'幕帷之间',title:'旧伤',t:'孩子半夜发烧，掀开衣襟，背上全是旧鞭痕——不是你的人打的。他低声说，城主从没把他当儿子，送他来，是盼他死在这儿。',l:{t:'送还敌城。',f:{intel:5,morale:-5},h:{ruthless:1},a:['c128c']},r:{t:'留下养着。',f:{morale:6,food:-5},h:{righteous:1},a:['c128c']}},
+{id:'c128c',ch:'camp',tier:'rare',o:1,theme:'幕帷之间',title:'认主',t:'几个月后，敌城来索质子。那孩子却跪在你帐前，说哪儿也不去。他不懂军政，只知道这是第一个没拿他换过东西的地方。',l:{t:'物归原主。',f:{intel:6,food:8,morale:-6},h:{ruthless:1}},r:{t:'收为义子。',f:{morale:8,military:5,food:-5},h:{righteous:1}}},
+
+// ─── 新增：多周目变体文案 ───
+{id:'c129',ch:'camp',tier:'base',theme:'乱世之初',title:'无月',t:'又是一个没有月亮的夜。守夜人说，你父亲死在这样的夜里。你摩挲着兵符，第一次真切地害怕起来。',t2:'又是一个没有月亮的夜。你早已不怕黑了——你知道天亮之后会发生什么，也知道自己撑不撑得到那一天。',t2_req:['end_unify','end_emperor'],l:{t:'独坐到天明。',f:{intel:5,morale:-5},h:{}},r:{t:'召人议事。',f:{intel:5,military:5},h:{}}},
+{id:'c130',ch:'camp',tier:'deep',mp:2,theme:'乱世之初',title:'似曾',t:'城门下又出现那个卖草鞋的道人。他看你的眼神像是认得你，却又像第一次见。他说：你这把刀，好像收过又拔出来过。',t2:'卖草鞋的道人又来了。这次他什么也没说，只把一双草鞋放下就走。你认得那草鞋——曾经有一世，你穿着它走进过春雨。',t2_req:['end_retire'],l:{t:'又赶他走。',f:{military:5,intel:-5},h:{ruthless:1}},r:{t:'收下草鞋。',f:{morale:5,intel:5},h:{}}},
+
+// ─── 新增：数值区间触发卡（双数值组合）───
+{id:'c131',ch:'camp',tier:'base',cs:{military:[70,100],morale:[0,30]},theme:'沙场点兵',title:'穷兵',t:'军营一日壮过一日，城里的灯却一日比一日少。副将说兵强马壮，老仆却低声说，强兵养在饿城里，迟早要回头咬人。',l:{t:'继续扩军。',f:{military:5,morale:-6},h:{ruthless:1}},r:{t:'分兵屯田。',f:{military:-50,food:8,morale:6},h:{righteous:1}}},
+{id:'c132',ch:'camp',tier:'base',cs:{food:[70,100],intel:[0,30]},theme:'幕帷之间',title:'饱盲',t:'粮仓堆得冒尖，斥候却三天没递回一张准图。粮官说仓里有的是底气，谋士说底气最厚的人，往往看不见脚下的坑。',l:{t:'高枕无忧。',f:{food:5,intel:-5},h:{}},r:{t:'散粮买信。',f:{food:-8,intel:8},h:{}}},
+{id:'c133',ch:'camp',tier:'base',cs:{morale:[70,100],military:[0,30]},theme:'沙场点兵',title:'虚名',t:'百姓爱戴你，连邻城都听说了你的仁名。可你的兵册薄得吓人。幕僚苦笑，说仁君的名声，挡不住一支饿狼般的军队。',l:{t:'借名募兵。',f:{military:8,morale:-6},h:{}},r:{t:'修德缓兵。',f:{morale:5,military:-5},h:{righteous:1}}},
+{id:'c134',ch:'camp',tier:'base',cs:{intel:[70,100],food:[0,30]},theme:'幕帷之间',title:'巧妇',t:'你算得清敌军每一步，却算不出明天三千人吃什么。谋士的妙计写满了纸，纸却不能下锅。',l:{t:'设计夺粮。',f:{food:8,intel:-5,morale:-5},h:{ruthless:1}},r:{t:'缓战筹粮。',f:{food:5,military:-5},h:{}}},
 ];
 
 // ─── STATE ───
@@ -461,6 +504,8 @@ function drawCard(){
 
 function clamp(v){return Math.max(0,Math.min(100,v))}
 function dampen(cur,ch){if(ch===0)return 0;const pH=ch>0&&cur>=85,pL=ch<0&&cur<=15;if(!pH&&!pL)return ch;let f=1;if(pH)f=cur>=90?.75:.9;if(pL)f=cur<=10?.75:.9;const d=Math.round(ch*f);return d===0?(ch>0?1:-1):d}
+function swingMult(){const n=(SD.relics||[]).length;if(n<=0)return 1.65;if(n===1)return 1.45;if(n===2)return 1.3;if(n<=4)return 1.15;return 1}
+function statSwing(v){return Math.round(v*swingMult())}
 function getRM(key){let m=1;if(!SD.relics||!SD.relics.length)return m;SD.relics.forEach(rid=>{const r=Object.values(RELICS).find(x=>x.id===rid);if(!r||!r.eff)return;const e=r.eff;if(key==='military'&&e.military_mult)m*=e.military_mult;if(key==='food_pos'&&e.food_pos_mult)m*=e.food_pos_mult;if(key==='morale'&&e.morale_mult)m*=e.morale_mult;if(key==='intel'&&e.intel_mult)m*=e.intel_mult;if(key==='intel_pos'&&e.intel_pos_mult)m*=e.intel_pos_mult;if(key==='ruthless'&&e.ruthless_mult)m*=e.ruthless_mult;if(key==='righteous'&&e.righteous_mult)m*=e.righteous_mult;if(key==='lust'&&e.lust_mult)m*=e.lust_mult;if(key==='aff_pos'&&e.aff_pos_mult)m*=e.aff_pos_mult;if(key==='siege'&&e.siege_bonus)m+=e.siege_bonus});return m}
 function hiddenDelta(k,v,rmKey){const m=getRM(rmKey);if(v<=0||m===1)return v;G.hiddenCarry=G.hiddenCarry||{};const raw=v*m+(G.hiddenCarry[k]||0);const out=Math.floor(raw);G.hiddenCarry[k]=raw-out;return out}
 function siegeBonus(k){let b=getRM('siege')-1;if(G.harem&&G.harem.includes('aman')&&k==='military')b+=5;if(G.harem&&G.harem.includes('hongsiu')&&k==='food')b+=5;if(G.harem&&G.harem.includes('qingzhao')&&k==='intel')b+=5;if(G.harem&&G.harem.includes('wuyue')&&k==='morale')b+=5;return b}
@@ -469,7 +514,7 @@ function apply(side){
   const ch=side==='left'?G.cur.l:G.cur.r;if(!ch)return null;
   if(side==='left'){G.cL++;G.cR=0}else{G.cR++;G.cL=0}
   const delta={};
-  if(ch.f){for(const k in ch.f){let v=ch.f[k];if(k==='military')v=Math.round(v*getRM('military'));if(k==='food'&&v>0)v=Math.round(v*getRM('food_pos'));if(k==='morale')v=Math.round(v*getRM('morale'));if(k==='intel'){v=Math.round(v*getRM('intel')*(v>0?getRM('intel_pos'):1))}v=dampen(G[k],v);const o=G[k];G[k]=clamp(G[k]+v);delta[k]=G[k]-o}}
+  if(ch.f){for(const k in ch.f){let v=statSwing(ch.f[k]);if(k==='military')v=Math.round(v*getRM('military'));if(k==='food'&&v>0)v=Math.round(v*getRM('food_pos'));if(k==='morale')v=Math.round(v*getRM('morale'));if(k==='intel'){v=Math.round(v*getRM('intel')*(v>0?getRM('intel_pos'):1))}v=dampen(G[k],v);const o=G[k];G[k]=clamp(G[k]+v);delta[k]=G[k]-o}}
   if(ch.h){for(const k in ch.h){let v=ch.h[k];if(k==='ruthless')v=hiddenDelta(k,v,'ruthless');if(k==='righteous')v=hiddenDelta(k,v,'righteous');if(k==='lust')v=hiddenDelta(k,v,'lust');if(k.endsWith('_aff'))v=hiddenDelta(k,v,'aff_pos');if(k==='romance'){G.romance_count=(G.romance_count||0)+v;continue}G[k]=(G[k]||0)+v}}
   if(ch.fl)G.flags.add(ch.fl);
   if(ch.a)ch.a.forEach(id=>{if(!G.pool.includes(id)&&!G.used.has(id))G.pool.push(id)});
@@ -572,9 +617,9 @@ const LOGS=[
   '父亲留下的旧地图边角磨得发白，五座城却被朱砂圈得很新。',
   '你不喜欢别人叫你少主。那像是在提醒你，父亲还没真正死远。',
   '军帐里最安静的时候，往往是所有人都在等你先说错一句话。',
-  '有些选择看起来只改一项数值，实际是在给日后的结局埋钉子。',
+  '有些决定也许只是一瞬，实际是在给日后埋钉子。',
   '兵法来自失败。每一次覆灭，都会把一点教训留到下一次出征。',
-  '四项数值不是越高越好。太低会崩，太高也会把你推向另一种死局。',
+  '水满则溢，月满则亏，自满则败，自矜则愚。',
   '攻城是里程碑。月份到了，下一座城会来找你；准备不足，城墙不会心软。',
   '幕僚提醒你：兵力压过一切时，将领也会开始觉得自己压过你。',
   '粮仓太满会养出虫鼠，也会养出贪心的人。',
@@ -585,11 +630,44 @@ const LOGS=[
   '老兵说，你挥手时像你父亲；他说完又立刻低头，仿佛这不是夸奖。'
 ];
 const NPC_LOGS={
-  aman:['阿蛮信刀，也信风。她不怕你强，只怕你把她当战利品。'],
-  hongsiu:['红袖看账时很少眨眼。她说账本不会骗人，骗人的是写账的人。'],
-  qingzhao:['清越写字极慢，像每一笔都在和旧国告别。'],
-  wuyue:['巫月祈祷时从不闭眼。她说神明若真的在，也该学会被人直视。'],
-  any:['后宫不是奖赏栏。留下一个人，也等于把她的麻烦一并留下。']
+  aman:[
+    '阿蛮不爱听军令，却总能第一个听见马蹄声。',
+    '阿蛮把短刀磨得很亮。她说刀钝了，人就会开始讲道理。',
+    '阿蛮今日没进主帐。巡营的兵说，她在城墙上看了一整夜的风。',
+    '阿蛮笑你坐姿太像王。她说真正的狼王，睡觉也该留一只眼。',
+    '阿蛮替你赶走了一个醉兵，却没领赏，只把那人的酒袋拿走了。',
+    '阿蛮说草原的誓言很短，短到背叛时也不会卡在喉咙里。'
+  ],
+  hongsiu:[
+    '红袖看账时很少眨眼。她说账本不会骗人，骗人的是写账的人。',
+    '红袖今日又盘了一遍粮账。她说亏空不会消失，只会换个名字。',
+    '红袖把一枚金叶子夹进账册。她说乱世里，漂亮东西也要会藏身。',
+    '红袖笑着同商人饮茶，茶凉之后，那人主动补齐了三车军粮。',
+    '红袖说银钱最像人心，攥得越紧，越容易从指缝里漏出去。',
+    '红袖替你留了一盏灯。灯旁压着账本，也压着一封没署名的信。'
+  ],
+  qingzhao:[
+    '清越写字极慢，像每一笔都在和旧国告别。',
+    '清越把一封旧信折了三折，像把某个名字藏回雪里。',
+    '清越今日没有焚书。她只是把灰扫进小盒，说灰也曾经是字。',
+    '清越说诗不能退敌，但能让活下来的人记得自己为何还活着。',
+    '清越望着新降的城池很久。她说城墙换旗，比人心换主容易。',
+    '清越替你改了一句军令。少了三个字，跪地的人便少了一排。'
+  ],
+  wuyue:[
+    '巫月祈祷时从不闭眼。她说神明若真的在，也该学会被人直视。',
+    '巫月把香灰吹进夜风里。她说神谕太轻，落到人间才会变重。',
+    '巫月腕上的银铃今日响了一声。她听见后，反而沉默了很久。',
+    '巫月说旧神不挑祭品，只挑最舍不得失去东西的人。',
+    '巫月替伤兵合上眼睛。她没有念经，只轻声问他还冷不冷。',
+    '巫月把碎神像擦干净。她说神明死去时，也该体面一点。'
+  ],
+  any:[
+    '帷帐里多了一盏灯，也多了一种不能轻易说出口的麻烦。',
+    '有人把她们称作赏赐。你知道这两个字迟早会惹出祸来。',
+    '亲近一个人，会让另一个人学会沉默。沉默有时比争吵更危险。',
+    '后宫不是奖赏栏。留下一个人，也等于把她的麻烦一并留下。'
+  ]
 };
 const WARNS={
   military_low:['营中逃兵越来越多。再不加军饷，明天连站岗的人都凑不齐了。','兵力太低时，攻城只是把人命递到城墙下。'],
